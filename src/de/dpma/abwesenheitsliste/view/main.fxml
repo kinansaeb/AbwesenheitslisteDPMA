@@ -30,6 +30,7 @@
       <ComboBox layoutX="111.0" layoutY="258.0" prefHeight="31.0" prefWidth="276.0" promptText="Kategorie" />
       <ComboBox layoutX="110.0" layoutY="189.0" prefHeight="31.0" prefWidth="276.0" promptText="Zeitraum" />
       <ComboBox fx:id="selection" layoutX="110.0" layoutY="120.0" prefHeight="31.0" prefWidth="276.0" promptText="Berufsbild &amp; Ausbildungsjahr" />
+     
       <Button layoutX="373.0" layoutY="323.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="31.0" prefWidth="108.0" text="Suchen">
          <font>
             <Font size="18.0" />

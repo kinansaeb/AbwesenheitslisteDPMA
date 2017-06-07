@@ -4,11 +4,11 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.abwesenheitsliste.view.manageUsersController">
    <children>
       <ListView layoutX="13.0" layoutY="8.0" prefHeight="274.0" prefWidth="379.0" />
       <Button layoutX="203.0" layoutY="296.0" mnemonicParsing="false" text="Löschen" />
-      <Button layoutX="305.0" layoutY="296.0" mnemonicParsing="false" text="Zurück" />
-      <Button layoutX="21.0" layoutY="296.0" mnemonicParsing="false" text="Benutzer hinzufügen" />
+      <Button layoutX="305.0" layoutY="296.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
+      <Button layoutX="21.0" layoutY="296.0" mnemonicParsing="false" onAction="#addUserButton" text="Benutzer hinzufügen" />
    </children>
 </AnchorPane>
