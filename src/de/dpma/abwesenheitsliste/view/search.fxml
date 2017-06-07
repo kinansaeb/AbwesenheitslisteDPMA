@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.abwesenheitsliste.view.searchController">
    <children>
       <TableView layoutY="37.0" prefHeight="315.0" prefWidth="600.0">
         <columns>
@@ -16,8 +16,8 @@
             <TableColumn prefWidth="150.0" text="Kommentar" />
         </columns>
       </TableView>
-      <Button layoutX="363.0" layoutY="355.0" mnemonicParsing="false" text="Termine anlegen" />
-      <Button layoutX="520.0" layoutY="355.0" mnemonicParsing="false" text="Zurück" />
-      <Button layoutY="-1.0" mnemonicParsing="false" text="Beenden" />
+      <Button layoutX="363.0" layoutY="355.0" mnemonicParsing="false" onAction="#createScheduleButton" text="Termine anlegen" />
+      <Button layoutX="520.0" layoutY="355.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
+      <Button layoutY="-1.0" mnemonicParsing="false" onAction="#closeButton" text="Beenden" />
    </children>
 </AnchorPane>

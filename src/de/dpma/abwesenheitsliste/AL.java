@@ -11,8 +11,17 @@ import javafx.stage.Stage;
 public class AL extends Application {
 
 	static Logger log = Logger.getLogger(AL.class.getName());
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates the Logger
+	 *         <p>
+	 *         This creates a logger for a named subsystem
+	 *
+	 * @Since JDK1.0
+	 */
 
-	public Stage stage;
+	public static Stage stage;
 
 	public static void main(String[] args) {
 		log.info("Applikation wird gestartet");
@@ -21,6 +30,14 @@ public class AL extends Application {
 
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method launches the application.
+	 *         <p>
+	 *         This method launches the application and logs the start and end
+	 *         of it
+	 */
 	@Override
 	public void start(Stage stage) throws Exception {
 		this.stage = stage;
@@ -37,3 +54,12 @@ public class AL extends Application {
 		stage.show();
 	}
 }
+
+/**
+ * @author Kinan Saeb
+ *         <p>
+ *         This method loads the scene into the stage.
+ *         <p>
+ *         This method loads the scene into the stage, logs the initialization
+ *         and sets a few properties for the stage
+ */
