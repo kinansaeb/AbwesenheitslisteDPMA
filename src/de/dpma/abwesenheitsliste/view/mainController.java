@@ -1,5 +1,7 @@
 package de.dpma.abwesenheitsliste.view;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import de.dpma.abwesenheitsliste.AL;
@@ -9,23 +11,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class mainController {
+public class mainController implements Initializable {
 	static Logger log = Logger.getLogger(AL.class.getName());
 	AL gen = new AL();
 	public static Stage stage;
-	private ComboBox<String> selection;
-
-	public void initialize() {
-		ObservableList<String> options = FXCollections.observableArrayList("Fachinformatiker",
-				"Fachangestellte für Medien- und Informationsdienste", "Elektroniker", "Schreiner",
-				"Kaufmann/frau für Büromanagement", "Verwaltungsfachangestellte");
-		selection = new ComboBox<String>(options);
-	}
+	String berufsbild;
+	String kategorie;
+	String datefield1;
+	String datefield2;
 
 	@FXML
 	public void searchButton(ActionEvent event) {
@@ -100,6 +99,26 @@ public class mainController {
 			e.printStackTrace();
 
 		}
+
+	}
+
+	@FXML
+	public ComboBox<String> combobox;
+	ObservableList<String> list = FXCollections.observableArrayList("IT 1. AJ", "IT 2. AJ", "IT 3. AJ", "KFB 1. AJ",
+			"KFB 2. AJ", "KFB 3. AJ", "VFA 1. AJ", "VFA 2. AJ", "VFA 3. AJ", "FAMI 1. AJ", "FAMI 2. AJ", "FAMI 3. AJ",
+			"Schreiner 1. AJ", "Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ",
+			"Elektroniker 3. AJ");
+
+	@FXML
+	public ComboBox<String> combobox2;
+	ObservableList<String> list2 = FXCollections.observableArrayList("Berufschule", "Fachbereich", "Urlaub", "Krank",
+			"Arbeit");
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		combobox.setItems(list);
+		combobox2.setItems(list2);
 
 	}
 

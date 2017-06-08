@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="62.0" layoutY="14.0" prefHeight="30.0" prefWidth="120.0" text="Speichern...">
@@ -14,9 +13,9 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <ImageView layoutX="97.0" layoutY="46.0">
+      <ImageView layoutX="97.0" layoutY="45.0">
          <image>
-            <Image url="@../ajax-loader.gif" />
+            <Image url="@../img/loader.gif" />
          </image>
       </ImageView>
    </children>

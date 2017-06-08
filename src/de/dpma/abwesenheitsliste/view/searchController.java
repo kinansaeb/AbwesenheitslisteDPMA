@@ -36,7 +36,7 @@ public class searchController {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
 			log.info("Scene wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
-			AL.stage.close();
+			mainController.stage.close();
 			stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setResizable(false);
