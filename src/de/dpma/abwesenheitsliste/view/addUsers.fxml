@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="264.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.abwesenheitsliste.view.addUsersController">
    <children>
       <Label layoutX="14.0" layoutY="41.0" text="Vorname">
          <font>
@@ -20,10 +20,10 @@
          </font>
       </Label>
       <TextField layoutX="183.0" layoutY="97.0" prefHeight="31.0" prefWidth="232.0" AnchorPane.rightAnchor="63.0" />
-      <ComboBox layoutX="14.0" layoutY="205.0" prefHeight="31.0" prefWidth="158.0" promptText="Einstellungsjahr" />
-      <ComboBox layoutX="14.0" layoutY="150.0" prefHeight="31.0" prefWidth="158.0" promptText="Berufsbild" />
+      <ComboBox fx:id="einstellungsjahr" layoutX="14.0" layoutY="205.0" prefHeight="31.0" prefWidth="158.0" promptText="Einstellungsjahr" />
+      <ComboBox fx:id="berufsbild" layoutX="14.0" layoutY="150.0" prefHeight="31.0" prefWidth="158.0" promptText="Berufsbild" />
       <TextField layoutX="183.0" layoutY="41.0" prefHeight="31.0" prefWidth="232.0" AnchorPane.rightAnchor="63.0" />
-      <Button layoutX="308.0" layoutY="205.0" mnemonicParsing="false" text="Ok" />
-      <Button layoutX="369.0" layoutY="205.0" mnemonicParsing="false" text="Abbrechen" />
+      <Button layoutX="308.0" layoutY="205.0" mnemonicParsing="false" onAction="#okButton" text="Ok" />
+      <Button layoutX="369.0" layoutY="205.0" mnemonicParsing="false" onAction="#abortButton" text="Abbrechen" />
    </children>
 </AnchorPane>

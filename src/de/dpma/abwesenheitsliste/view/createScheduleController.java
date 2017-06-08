@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class createScheduleController implements Initializable {
@@ -27,7 +29,7 @@ public class createScheduleController implements Initializable {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("saving.fxml"));
 			log.info("Scene wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
-
+			searchController.stage.close();
 			stage = new Stage();
 			stage.setScene(new Scene(root));
 			stage.setResizable(false);
@@ -45,7 +47,14 @@ public class createScheduleController implements Initializable {
 	}
 
 	@FXML
-	private Textfield kommentar;
+	private TextField kommentar;
+
+	@FXML
+	private DatePicker von;
+
+	@FXML
+	private DatePicker bis;
+
 	@FXML
 	public ComboBox<String> names;
 	ObservableList<String> nameList = FXCollections.observableArrayList("IT 1. AJ", "IT 2. AJ", "IT 3. AJ", "KFB 1. AJ",
@@ -65,4 +74,10 @@ public class createScheduleController implements Initializable {
 		categories.setItems(categorieList);
 
 	}
+
+	public void ausgabe() {
+
+		System.out.println("Kommentarausgabe: " + kommentar);
+	}
+
 }
