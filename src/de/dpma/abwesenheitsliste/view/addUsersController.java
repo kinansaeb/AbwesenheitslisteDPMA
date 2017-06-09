@@ -41,6 +41,16 @@ public class addUsersController implements Initializable {
 
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the manage users stage
+	 *         <p>
+	 *         This method goes to the manage users stage, closes the opened
+	 *         stage and sets various properties for the newly opened stage.
+	 * 
+	 */
+
 	public void okButton(ActionEvent event) {
 		try {
 
@@ -61,22 +71,67 @@ public class addUsersController implements Initializable {
 
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the manage users stage
+	 *         <p>
+	 *         This method goes to the manage users stage, closes the opened
+	 *         stage and sets various properties for the newly opened stage. It
+	 *         also initializes the saving into the database
+	 * 
+	 */
+
 	@FXML
 	public ComboBox<String> berufsbild;
 	ObservableList<String> berufsbildList = FXCollections.observableArrayList("IT 1. AJ", "IT 2. AJ", "IT 3. AJ",
 			"KFB 1. AJ", "KFB 2. AJ", "KFB 3. AJ", "VFA 1. AJ", "VFA 2. AJ", "VFA 3. AJ", "FAMI 1. AJ", "FAMI 2. AJ",
-			"FAMI 3. AJ", "Schreiner 1. AJ", "Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ",
-			"Elektroniker 2. AJ", "Elektroniker 3. AJ");
+			"FAMI 3. AJ", "Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ",
+			"Elektroniker 3. AJ");
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 */
 
 	@FXML
 	public ComboBox<String> einstellungsjahr;
 	ObservableList<String> einstellungsjahrList = FXCollections.observableArrayList("2017", "2016", "2015", "2014",
 			"2013", "2012");
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 * 
+	 */
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		berufsbild.setItems(berufsbildList);
 		einstellungsjahr.setItems(einstellungsjahrList);
 	}
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method initializes the observable list into the ComboBoxes
+	 *         <p>
+	 *         This method puts the String given in the observable lists into
+	 *         the ComboBoxes
+	 * 
+	 * 
+	 * 
+	 */
 
 }

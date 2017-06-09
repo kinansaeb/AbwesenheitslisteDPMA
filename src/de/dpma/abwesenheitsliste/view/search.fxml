@@ -16,8 +16,8 @@
             <TableColumn prefWidth="150.0" text="Kommentar" />
         </columns>
       </TableView>
-      <Button layoutX="363.0" layoutY="357.0" mnemonicParsing="false" onAction="#createScheduleButton" text="Termine anlegen" />
-      <Button layoutX="520.0" layoutY="357.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
+      <Button layoutX="308.0" layoutY="353.0" mnemonicParsing="false" onAction="#createScheduleButton" text="Termine anlegen" />
+      <Button layoutX="507.0" layoutY="353.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
       <Button layoutX="6.0" layoutY="4.0" mnemonicParsing="false" onAction="#closeButton" text="Beenden" />
    </children>
 </AnchorPane>

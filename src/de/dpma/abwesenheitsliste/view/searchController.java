@@ -49,6 +49,17 @@ public class searchController {
 		}
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes back to the main stage
+	 *         <p>
+	 *         This method goes back to the main stage, closes the opened stage
+	 *         and sets various properties
+	 * 
+	 * 
+	 */
+
 	public void createScheduleButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("createSchedule.fxml"));
@@ -66,5 +77,15 @@ public class searchController {
 
 		}
 	}
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the create schedule stage
+	 *         <p>
+	 *         This method goes back to the create schedule, closes the opened
+	 *         stage and sets various properties
+	 * 
+	 * 
+	 */
 
 }

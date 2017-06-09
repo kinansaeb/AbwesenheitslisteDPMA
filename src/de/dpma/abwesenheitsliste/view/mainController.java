@@ -48,6 +48,17 @@ public class mainController implements Initializable {
 
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the deployment plan page
+	 *         <p>
+	 *         This method goes to the deployment plan stage, closes the opened
+	 *         stage and sets various properties for the newly opened stage. It
+	 *         also searchs for the given properties in the database
+	 * 
+	 * 
+	 */
 	@FXML
 	public void closeButton(ActionEvent event) {
 		Platform.exit();
@@ -82,6 +93,16 @@ public class mainController implements Initializable {
 		}
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the manage users stage
+	 *         <p>
+	 *         This method goes to the manage users stage, closes the opened
+	 *         stage and sets various properties for the newly opened stage
+	 * 
+	 */
+
 	@FXML
 	public void deploymentPlanButton(ActionEvent event) {
 		try {
@@ -100,19 +121,54 @@ public class mainController implements Initializable {
 
 		}
 
+		/**
+		 * @author Kinan Saeb
+		 *         <p>
+		 *         This method opens the deployment plan stage
+		 *         <p>
+		 *         This method opens the deployment plan stage, closes the
+		 *         opened stage and sets various properties for the newly opened
+		 *         stage
+		 * 
+		 * 
+		 */
+
 	}
 
 	@FXML
 	public ComboBox<String> combobox;
 	ObservableList<String> list = FXCollections.observableArrayList("IT 1. AJ", "IT 2. AJ", "IT 3. AJ", "KFB 1. AJ",
 			"KFB 2. AJ", "KFB 3. AJ", "VFA 1. AJ", "VFA 2. AJ", "VFA 3. AJ", "FAMI 1. AJ", "FAMI 2. AJ", "FAMI 3. AJ",
-			"Schreiner 1. AJ", "Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ",
-			"Elektroniker 3. AJ");
+			"Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ", "Elektroniker 3. AJ");
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 * 
+	 */
 
 	@FXML
 	public ComboBox<String> combobox2;
 	ObservableList<String> list2 = FXCollections.observableArrayList("Berufschule", "Fachbereich", "Urlaub", "Krank",
 			"Arbeit");
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 * 
+	 */
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -121,5 +177,17 @@ public class mainController implements Initializable {
 		combobox2.setItems(list2);
 
 	}
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method initializes the observable list into the ComboBoxes
+	 *         <p>
+	 *         This method puts the String given in the observable lists into
+	 *         the ComboBoxes
+	 * 
+	 * 
+	 * 
+	 */
 
 }

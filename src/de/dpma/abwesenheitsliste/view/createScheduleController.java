@@ -42,9 +42,33 @@ public class createScheduleController implements Initializable {
 		}
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the saving stage
+	 *         <p>
+	 *         This method goes to the saving stage, closes the opened stage and
+	 *         sets various properties. It also initializes the saving of given
+	 *         files
+	 * 
+	 * 
+	 */
+
 	public void abortButton(ActionEvent event) {
 		searchController.stage.close();
+
 	}
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method closes the actual stage
+	 *         <p>
+	 *         This method closes the actual stage
+	 * 
+	 * 
+	 * 
+	 */
 
 	@FXML
 	private TextField kommentar;
@@ -59,13 +83,35 @@ public class createScheduleController implements Initializable {
 	public ComboBox<String> names;
 	ObservableList<String> nameList = FXCollections.observableArrayList("IT 1. AJ", "IT 2. AJ", "IT 3. AJ", "KFB 1. AJ",
 			"KFB 2. AJ", "KFB 3. AJ", "VFA 1. AJ", "VFA 2. AJ", "VFA 3. AJ", "FAMI 1. AJ", "FAMI 2. AJ", "FAMI 3. AJ",
-			"Schreiner 1. AJ", "Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ",
-			"Elektroniker 3. AJ");
+			"Schreiner 2. AJ", "Schreiner 3. AJ", "Elektroniker 1. AJ", "Elektroniker 2. AJ", "Elektroniker 3. AJ");
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 * 
+	 */
 
 	@FXML
 	public ComboBox<String> categories;
 	ObservableList<String> categorieList = FXCollections.observableArrayList("Berufschule", "Fachbereich", "Urlaub",
 			"Krank", "Arbeit");
+
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This creates a new ComboBox and an observable list
+	 *         <p>
+	 *         This creates a new ComboBox and an observable List, adding a
+	 *         variety of Strings into it.
+	 * 
+	 * 
+	 * 
+	 */
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -75,9 +121,16 @@ public class createScheduleController implements Initializable {
 
 	}
 
-	public void ausgabe() {
-
-		System.out.println("Kommentarausgabe: " + kommentar);
-	}
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method initializes the observable list into the ComboBoxes
+	 *         <p>
+	 *         This method puts the String given in the observable lists into
+	 *         the ComboBoxes
+	 * 
+	 * 
+	 * 
+	 */
 
 }

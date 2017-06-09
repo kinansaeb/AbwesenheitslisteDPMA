@@ -32,6 +32,15 @@ public class manageUsersController {
 		}
 	}
 
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes back to the main stage
+	 *         <p>
+	 *         This method goes to the main stage, closes the opened stage and
+	 *         sets various properties for the newly opened stage.
+	 * 
+	 */
 	public void addUserButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addUsers.fxml"));
@@ -49,5 +58,13 @@ public class manageUsersController {
 
 		}
 	}
-
+	/**
+	 * @author Kinan Saeb
+	 *         <p>
+	 *         This method goes to the add users stage
+	 *         <p>
+	 *         This method goes to the add users stage, closes the opened stage
+	 *         and sets various properties for the newly opened stage.
+	 * 
+	 */
 }
