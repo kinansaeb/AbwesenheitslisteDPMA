@@ -8,6 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+
 public class AL extends Application {
 
 	static Logger log = Logger.getLogger(AL.class.getName());
@@ -23,10 +31,15 @@ public class AL extends Application {
 
 	public static Stage stage;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		log.info("Applikation wird gestartet");
 		Application.launch(AL.class, args);
-		log.info("Applikation wird geschlossen");
+		log.info("Applikation wird geschlossen") ;
+		 Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+	    Properties properties = new Properties();
+	    properties.put("user", "user1");
+	    properties.put("password", "user1");
+	    Connection connection = DriverManager.getConnection("jdbc:derby:c:/Users/AlBacher/git/AbwesenheitslisteDPMA/DatenbankDerby;create=true", properties);;
 
 	}
 
