@@ -35,12 +35,12 @@ public class AL extends Application {
 		log.info("Applikation wird gestartet");
 		Application.launch(AL.class, args);
 		log.info("Applikation wird geschlossen") ;
-		 Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+		 Class.forName("org.apache.derby.jdbc.ClientDriver");
 	    Properties properties = new Properties();
 	    properties.put("user", "user1");
 	    properties.put("password", "user1");
-	    Connection connection = DriverManager.getConnection("jdbc:derby:c:/Users/AlBacher/git/AbwesenheitslisteDPMA/DatenbankDerby;create=true", properties);;
-
+	    Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/DatenbankDerby;create=false", properties);
+	  
 	}
 
 	/**
