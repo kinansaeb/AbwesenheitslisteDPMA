@@ -1,5 +1,9 @@
 package de.dpma.abwesenheitsliste;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 import javafx.application.Application;
@@ -7,14 +11,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
 
 public class AL extends Application {
 
@@ -33,14 +29,18 @@ public class AL extends Application {
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		log.info("Applikation wird gestartet");
+		Class.forName("org.apache.derby.jdbc.ClientDriver");
+		Properties properties = new Properties();
+		properties.put("user", "root");
+		properties.put("password", "dpmadpma");
+		log.info("Datenbank Verbindung erfolgreich+ hergestellt");
+		Connection connection = DriverManager
+				.getConnection("jdbc:derby://localhost:1527/c:/derby/DatenbankDerby;create=false", properties);
+
+		log.info("Datenbank verbindung hergestellt");
 		Application.launch(AL.class, args);
-		log.info("Applikation wird geschlossen") ;
-		 Class.forName("org.apache.derby.jdbc.ClientDriver");
-	    Properties properties = new Properties();
-	    properties.put("user", "user1");
-	    properties.put("password", "user1");
-	    Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/DatenbankDerby;create=false", properties);
-	  
+		log.info("Applikation wird geschlossen");
+
 	}
 
 	/**

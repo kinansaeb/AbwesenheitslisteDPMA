@@ -3,10 +3,14 @@ package de.dpma.abwesenheitsliste.view;
 import java.util.logging.Logger;
 
 import de.dpma.abwesenheitsliste.AL;
+import de.dpma.abwesenheitsliste.dao.manageUsersDAO;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class manageUsersController {
@@ -31,6 +35,11 @@ public class manageUsersController {
 
 		}
 	}
+
+	@FXML
+	private TableView<manageUsersDAO> userTbl;
+	@FXML
+	private TableColumn userName;
 
 	/**
 	 * @author Kinan Saeb
