@@ -56,8 +56,7 @@ public class mainController implements Initializable {
 	 *         This method goes to the deployment plan stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage. It
 	 *         also searchs for the given properties in the database
-	 * 
-	 * 
+	 * @since JDK 1.0 
 	 */
 	@FXML
 	public void closeButton(ActionEvent event) {
@@ -71,7 +70,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method creates a new event handler for closing the whole
 	 *         application within a button-click
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	@FXML
@@ -100,7 +99,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method goes to the manage users stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	@FXML
@@ -129,8 +128,7 @@ public class mainController implements Initializable {
 		 *         This method opens the deployment plan stage, closes the
 		 *         opened stage and sets various properties for the newly opened
 		 *         stage
-		 * 
-		 * 
+		 *@since JDK 1.0
 		 */
 
 	}
@@ -148,9 +146,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	@FXML
@@ -165,9 +161,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
-	 * 
+	 *         @since JDK 1.0 
 	 */
 
 	@Override
@@ -185,9 +179,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method puts the String given in the observable lists into
 	 *         the ComboBoxes
-	 * 
-	 * 
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 }

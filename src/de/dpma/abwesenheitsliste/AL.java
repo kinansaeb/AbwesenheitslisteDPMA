@@ -15,16 +15,7 @@ import javafx.stage.Stage;
 public class AL extends Application {
 
 	static Logger log = Logger.getLogger(AL.class.getName());
-	/**
-	 * @author Kinan Saeb
-	 *         <p>
-	 *         This creates the Logger
-	 *         <p>
-	 *         This creates a logger for a named subsystem
-	 *
-	 * @Since JDK1.0
-	 */
-
+	
 	public static Stage stage;
 
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -32,7 +23,27 @@ public class AL extends Application {
 		Class.forName("org.apache.derby.jdbc.ClientDriver");
 		Properties properties = new Properties();
 		properties.put("user", "root");
+		/*
+		 * @author Alexander Bacher
+		 * <p>
+		 * This method add the User  root to the database
+		 * <p>
+		 * This method add the User root via  put command to the database.
+		 * After that the User root is in the database
+		 * 
+		 * @since JDK 1.0
+		 */
 		properties.put("password", "dpmadpma");
+		/*
+		 * @author Alexander Bacher
+		 * <p>
+		 * This method add the password to the user "root" in the database
+		 * <p>
+		 * This method add the password dpmadpma to the user  "root" via  Put command
+		 * After that the User root has the password dpmadpma
+		 * 
+		 * @since JDK 1.0
+		 */
 		log.info("Datenbank Verbindung erfolgreich+ hergestellt");
 		Connection connection = DriverManager
 				.getConnection("jdbc:derby://localhost:1527/c:/derby/DatenbankDerby;create=false", properties);
@@ -43,14 +54,7 @@ public class AL extends Application {
 
 	}
 
-	/**
-	 * @author Kinan Saeb
-	 *         <p>
-	 *         This method launches the application.
-	 *         <p>
-	 *         This method launches the application and logs the start and end
-	 *         of it
-	 */
+
 	@Override
 	public void start(Stage stage) throws Exception {
 		this.stage = stage;
@@ -68,11 +72,4 @@ public class AL extends Application {
 	}
 }
 
-/**
- * @author Kinan Saeb
- *         <p>
- *         This method loads the scene into the stage.
- *         <p>
- *         This method loads the scene into the stage, logs the initialization
- *         and sets a few properties for the stage
- */
+

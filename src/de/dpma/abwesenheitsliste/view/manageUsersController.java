@@ -48,7 +48,7 @@ public class manageUsersController {
 	 *         <p>
 	 *         This method goes to the main stage, closes the opened stage and
 	 *         sets various properties for the newly opened stage.
-	 * 
+	 * @since JDK 1.0 
 	 */
 	public void addUserButton(ActionEvent event) {
 		try {
@@ -74,6 +74,6 @@ public class manageUsersController {
 	 *         <p>
 	 *         This method goes to the add users stage, closes the opened stage
 	 *         and sets various properties for the newly opened stage.
-	 * 
+	 * @since JDK 1.0 
 	 */
 }

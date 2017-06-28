@@ -28,7 +28,7 @@ public class searchController {
 	 *         <p>
 	 *         This method creates a new event handler for closing the whole
 	 *         application within a button-click
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	public void backButton(ActionEvent event) {
@@ -56,8 +56,7 @@ public class searchController {
 	 *         <p>
 	 *         This method goes back to the main stage, closes the opened stage
 	 *         and sets various properties
-	 * 
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	public void createScheduleButton(ActionEvent event) {
@@ -84,8 +83,7 @@ public class searchController {
 	 *         <p>
 	 *         This method goes back to the create schedule, closes the opened
 	 *         stage and sets various properties
-	 * 
-	 * 
+	 *@since JDK 1.0 
 	 */
 
 }

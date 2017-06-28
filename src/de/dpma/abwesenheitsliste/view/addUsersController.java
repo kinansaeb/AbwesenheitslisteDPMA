@@ -48,7 +48,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This method goes to the manage users stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage.
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	public void okButton(ActionEvent event) {
@@ -79,7 +79,7 @@ public class addUsersController implements Initializable {
 	 *         This method goes to the manage users stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage. It
 	 *         also initializes the saving into the database
-	 * 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -96,8 +96,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -112,9 +111,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
-	 * 
+	 *         @since JDK 1.0 
 	 */
 
 	@Override
@@ -129,9 +126,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This method puts the String given in the observable lists into
 	 *         the ComboBoxes
-	 * 
-	 * 
-	 * 
+	 * @since JDK 1.0  
 	 */
 
 }

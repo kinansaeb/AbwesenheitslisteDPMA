@@ -50,7 +50,7 @@ public class createScheduleController implements Initializable {
 	 *         This method goes to the saving stage, closes the opened stage and
 	 *         sets various properties. It also initializes the saving of given
 	 *         files
-	 * 
+	 * @since JDK 1.0 
 	 * 
 	 */
 
@@ -65,9 +65,10 @@ public class createScheduleController implements Initializable {
 	 *         This method closes the actual stage
 	 *         <p>
 	 *         This method closes the actual stage
+	 *         It will close the stage by clicking abortButton
+	 *         @since JDK 1.0 
 	 * 
-	 * 
-	 * 
+	 *
 	 */
 
 	@FXML
@@ -91,9 +92,7 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
-	 * 
+	 *         @since JDK 1.0 
 	 */
 
 	@FXML
@@ -108,9 +107,7 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * 
-	 * 
-	 * 
+	 * @since JDK 1.0 
 	 */
 
 	@Override
@@ -128,9 +125,7 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This method puts the String given in the observable lists into
 	 *         the ComboBoxes
-	 * 
-	 * 
-	 * 
+	 * @since JDK 1.0
 	 */
 
 }

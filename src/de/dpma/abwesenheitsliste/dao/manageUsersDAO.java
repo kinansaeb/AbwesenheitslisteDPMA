@@ -12,6 +12,7 @@ import de.dpma.abwesenheitsliste.model.Benutzer;
 public class manageUsersDAO {
 	// public SimpleIntegerProperty userName = new SimpleIntegerProperty();
 	final String SELECT_ALL_USERS = "SELECT * FROM ROOT.BENUTZER";
+	
 	private final Connection con;
 
 	public List<Benutzer> allUsers() throws SQLException {
@@ -20,7 +21,7 @@ public class manageUsersDAO {
 
 		ArrayList<Benutzer> User = new ArrayList<>();
 		while (result.next()) {
-			User Users = new User();
+			Benutzer Users = new Benutzer();
 			Users.setBerufsbild(result.getString("berufsbild"));
 			Users.setAusbildungsjahr(result.getInt("ausbildungsjahr"));
 			Users.setCategory(result.getString("kategorie"));
@@ -28,7 +29,26 @@ public class manageUsersDAO {
 			Users.setName(result.getString("name"));
 
 			User.add(Users);
+			/*
+			 * @author Alexander Bacher 
+			 * <p>
+			 * This is the select Method
+			 * <p>
+			 * This method will select all Berufsbild,Ausbildungsjahr,Category,Id, Name.
+			 * So all columns will be selected
+			 * @since JDK 1.0
+			 */
 		}
 		return User;
+		/*
+		 * @author Alexander Bacher 
+		 * <p>
+		 * This is the retunr Methode.
+		 * <p>
+		 * This is the return method. It will be retunr all selected Columns
+		 * It use the data get from User.add(Users) Method
+		 * @return data from User.add(Users)
+		 */
+		
 	}
 }
