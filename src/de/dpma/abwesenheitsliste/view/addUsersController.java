@@ -25,7 +25,7 @@ public class addUsersController implements Initializable {
 		try {
 
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("manageUsers.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'Benutzer verwalten' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			manageUsersController.stage.close();
 			stage = new Stage();
@@ -48,14 +48,14 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This method goes to the manage users stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage.
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	public void okButton(ActionEvent event) {
 		try {
 
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("manageUsers.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'Benutzer verwalten' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			manageUsersController.stage.close();
 			stage = new Stage();
@@ -111,7 +111,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 *         @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@Override
@@ -126,7 +126,7 @@ public class addUsersController implements Initializable {
 	 *         <p>
 	 *         This method puts the String given in the observable lists into
 	 *         the ComboBoxes
-	 * @since JDK 1.0  
+	 * @since JDK 1.0
 	 */
 
 }

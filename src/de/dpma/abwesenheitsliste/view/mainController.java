@@ -33,7 +33,7 @@ public class mainController implements Initializable {
 		try {
 
 			FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("search.fxml"));
-			log.info("Scene wird initalisiert.");
+			log.info("Scene 'search.fxml' wird initalisiert.");
 			Parent root = (Parent) fxmlLoader.load();
 
 			AL.stage.close();
