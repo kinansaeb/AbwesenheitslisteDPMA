@@ -10,12 +10,12 @@
       <Button layoutX="203.0" layoutY="310.0" mnemonicParsing="false" text="Löschen" />
       <Button layoutX="305.0" layoutY="310.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
       <Button layoutX="21.0" layoutY="310.0" mnemonicParsing="false" onAction="#addUserButton" text="Benutzer hinzufügen" />
-      <TableView layoutX="14.0" layoutY="14.0" prefHeight="278.0" prefWidth="377.0">
+      <TableView fx:id="userTbl" layoutX="14.0" layoutY="14.0" prefHeight="278.0" prefWidth="377.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="75.0" text="NAME" />
-            <TableColumn prefWidth="121.0" text="BERUFSBILD" />
-            <TableColumn prefWidth="105.0" text="AJ" />
+          <TableColumn fx:id="id" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="userName" prefWidth="207.0" text="NAME" />
+            <TableColumn fx:id="berufsbild" prefWidth="105.0" text="BERUFSBILD" />
+            <TableColumn fx:id="ausbildungsjahr" prefWidth="29.0" text="AJ" />
         </columns>
       </TableView>
    </children>

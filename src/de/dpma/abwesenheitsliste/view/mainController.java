@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import de.dpma.abwesenheitsliste.AL;
+import de.dpma.abwesenheitsliste.dao.ManageUsersDAO;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,6 +26,7 @@ public class mainController implements Initializable {
 	String kategorie;
 	String datefield1;
 	String datefield2;
+	public static ManageUsersDAO manageUsersDAO = new ManageUsersDAO(AL.con.getConnection());
 
 	@FXML
 	public void searchButton(ActionEvent event) {
@@ -56,7 +58,7 @@ public class mainController implements Initializable {
 	 *         This method goes to the deployment plan stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage. It
 	 *         also searchs for the given properties in the database
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 	@FXML
 	public void closeButton(ActionEvent event) {
@@ -70,7 +72,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method creates a new event handler for closing the whole
 	 *         application within a button-click
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -99,7 +101,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method goes to the manage users stage, closes the opened
 	 *         stage and sets various properties for the newly opened stage
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -128,7 +130,7 @@ public class mainController implements Initializable {
 		 *         This method opens the deployment plan stage, closes the
 		 *         opened stage and sets various properties for the newly opened
 		 *         stage
-		 *@since JDK 1.0
+		 * @since JDK 1.0
 		 */
 
 	}
@@ -146,7 +148,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -161,7 +163,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 *         @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@Override
@@ -179,7 +181,7 @@ public class mainController implements Initializable {
 	 *         <p>
 	 *         This method puts the String given in the observable lists into
 	 *         the ComboBoxes
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 }
