@@ -18,7 +18,7 @@ public class savingController {
 		try {
 
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("saving.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'saving.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			searchController.stage.close();
 			stage = new Stage();

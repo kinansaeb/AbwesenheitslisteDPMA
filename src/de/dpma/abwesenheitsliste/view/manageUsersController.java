@@ -57,7 +57,7 @@ public class manageUsersController {
 	public void backButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'main.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			mainController.stage.close();
 			stage = new Stage();
@@ -75,7 +75,7 @@ public class manageUsersController {
 	public void addUserButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addUsers.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'addUsers.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 
 			stage = new Stage();

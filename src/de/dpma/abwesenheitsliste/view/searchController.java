@@ -34,7 +34,7 @@ public class searchController {
 	public void backButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'main.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			mainController.stage.close();
 			stage = new Stage();
@@ -62,7 +62,7 @@ public class searchController {
 	public void createScheduleButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("createSchedule.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'createSchedule.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 
 			stage = new Stage();
