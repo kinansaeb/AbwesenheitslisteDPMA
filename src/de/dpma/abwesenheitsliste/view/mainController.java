@@ -79,7 +79,7 @@ public class mainController implements Initializable {
 	public void manageUsersButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("manageUsers.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'manageUsers.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			AL.stage.close();
 			stage = new Stage();
@@ -108,7 +108,7 @@ public class mainController implements Initializable {
 	public void deploymentPlanButton(ActionEvent event) {
 		try {
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("search.fxml"));
-			log.info("Scene wird initalisiert");
+			log.info("Scene 'search.fxml' wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
 			AL.stage.close();
 			stage = new Stage();
