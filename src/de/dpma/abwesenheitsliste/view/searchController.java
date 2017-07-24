@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
@@ -22,28 +23,30 @@ public class searchController {
 	AL gen = new AL();
 	public static Stage stage;
 	@FXML
-	private TableView<Terminliste> userTbl = new TableView<>();
+	private TableView<Termin> userTbl = new TableView<>();
 	@FXML
-	private TableColumn<Terminliste, String> id = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> id = new TableColumn<Termin, String>();
 	@FXML
-	private TableColumn<Terminliste, String> userName = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> userName = new TableColumn<Termin, String>();
 	@FXML
-	private TableColumn<Terminliste, String> vonDate = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> vonDate = new TableColumn<Termin, String>();
 	@FXML
-	private TableColumn<Terminliste, String> bisDate = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> bisDate = new TableColumn<Termin, String>();
 	@FXML
-	private TableColumn<Terminliste, String> kategorie = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> kategorie = new TableColumn<Termin, String>();
 	@FXML
-	private TableColumn<Terminliste, String> kommentar = new TableColumn<Terminliste, String>();
+	private TableColumn<Termin, String> kommentar = new TableColumn<Termin, String>();
 
 	@FXML
 	private void initialize() throws SQLException {
-		List<Termin> termin = mainController.searchUsersDAO.allTermine();
+		List<Termin> termin = mainController.SearchUsersDAO.allTermine();
 		ObservableList<Termin> terminList = FXCollections.observableArrayList();
 		terminList = FXCollections.observableArrayList(termin);
 		userTbl.setItems(terminList);
 		userName.setCellValueFactory(cellData -> cellData.getValue().getName());
 		id.setCellValueFactory(cellData -> cellData.getValue().convertId());
+		kategorie.setCellValueFactory(cellData -> cellData.getValue().getKategorie());
+		kommentar.setCellValueFactory(cellData -> cellData.getValue().getKommentar());
 	}
 
 	@FXML

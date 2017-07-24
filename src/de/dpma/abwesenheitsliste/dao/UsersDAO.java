@@ -9,13 +9,15 @@ import java.util.List;
 
 import de.dpma.abwesenheitsliste.model.Benutzer;
 
-public class ManageUsersDAO {
+public class UsersDAO {
 	// public SimpleIntegerProperty userName = new SimpleIntegerProperty();
 	final String SELECT_ALL_USERS = "SELECT * FROM ROOT.BENUTZER";
+	final String DELETE_USER = "DELETE FROM BENUTZER WHERE ID = ? ";
+	final String ADD_USER = "INSERT INTO ROOT.BENUTZER (ID, NAME, BERUFSBILD, AUSBILDUNGSJAHR) VALUES(?, ?, ?, ?)";
 
 	private final Connection con;
 
-	public ManageUsersDAO(Connection con) {
+	public UsersDAO(Connection con) {
 		this.con = con;
 	}
 
@@ -42,6 +44,7 @@ public class ManageUsersDAO {
 			 */
 		}
 		return User;
+
 		/*
 		 * @author Alexander Bacher <p> This is the retunr Methode. <p> This is
 		 * the return method. It will be retunr all selected Columns It use the
@@ -52,4 +55,32 @@ public class ManageUsersDAO {
 
 	}
 
+	public void deleteUser(Benutzer user) {
+		try {
+			PreparedStatement stat = con.prepareStatement(DELETE_USER);
+			stat.setInt(1, user.getId().getValue());
+			stat.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void addUser(Benutzer user) {
+		try {
+			PreparedStatement stat = con.prepareStatement(ADD_USER);
+			stat.setInt(1, user.getId().getValue());
+			stat.setString(2, user.getName().getValue());
+			stat.setString(3, user.getBerufsbild().getValue());
+			stat.setInt(4, user.getAusbildungsjahr().getValue());
+			stat.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 }

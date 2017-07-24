@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dpma.abwesenheitsliste.view.manageUsersController">
    <children>
-      <Button layoutX="203.0" layoutY="310.0" mnemonicParsing="false" text="Löschen" />
+      <Button layoutX="203.0" layoutY="310.0" mnemonicParsing="false" onAction="#deleteUserButton" text="Löschen" />
       <Button layoutX="305.0" layoutY="310.0" mnemonicParsing="false" onAction="#backButton" text="Zurück" />
       <Button layoutX="21.0" layoutY="310.0" mnemonicParsing="false" onAction="#addUserButton" text="Benutzer hinzufügen" />
       <TableView fx:id="userTbl" layoutX="14.0" layoutY="14.0" prefHeight="278.0" prefWidth="377.0">

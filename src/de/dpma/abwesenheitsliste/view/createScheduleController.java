@@ -1,10 +1,12 @@
 package de.dpma.abwesenheitsliste.view;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import de.dpma.abwesenheitsliste.AL;
+import de.dpma.abwesenheitsliste.model.Termin;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +21,17 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class createScheduleController implements Initializable {
+	@FXML
+	private ComboBox<String> namensListe = new ComboBox();
+	@FXML
+	private ComboBox<String> kategorie = new ComboBox();
+	@FXML
+	private TextField kommentarFeld = new TextField();
+	@FXML
+	private DatePicker vonPicker = new DatePicker();
+	@FXML
+	private DatePicker bisPicker = new DatePicker();
+
 	static Logger log = Logger.getLogger(AL.class.getName());
 	AL gen = new AL();
 	public static Stage stage;
@@ -26,6 +39,17 @@ public class createScheduleController implements Initializable {
 
 	public void okButton(ActionEvent event) {
 		try {
+			Termin schedule = new Termin();
+			schedule.setName(namensListe.getValue());
+			schedule.setVon(vonPicker.getValue());
+			schedule.setBis(bisPicker.getValue());
+			schedule.setKategorie(kategorie.getValue());
+			// schedule.setKommentar(kommentar.getText());
+			// List<Termin> lastSchedule =
+			// mainController.createScheduleDAO.allTermine();
+			// schedule.setId(lastSchedule.size());
+			mainController.createScheduleDAO.addSchedule(schedule);
+
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("saving.fxml"));
 			log.info("Scene wird initalisiert");
 			Parent root = (Parent) fxmlLoader.load();
@@ -50,7 +74,7 @@ public class createScheduleController implements Initializable {
 	 *         This method goes to the saving stage, closes the opened stage and
 	 *         sets various properties. It also initializes the saving of given
 	 *         files
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 * 
 	 */
 
@@ -64,9 +88,9 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This method closes the actual stage
 	 *         <p>
-	 *         This method closes the actual stage
-	 *         It will close the stage by clicking abortButton
-	 *         @since JDK 1.0 
+	 *         This method closes the actual stage It will close the stage by
+	 *         clicking abortButton
+	 * @since JDK 1.0
 	 * 
 	 *
 	 */
@@ -92,7 +116,7 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 *         @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@FXML
@@ -107,7 +131,7 @@ public class createScheduleController implements Initializable {
 	 *         <p>
 	 *         This creates a new ComboBox and an observable List, adding a
 	 *         variety of Strings into it.
-	 * @since JDK 1.0 
+	 * @since JDK 1.0
 	 */
 
 	@Override
@@ -118,6 +142,12 @@ public class createScheduleController implements Initializable {
 
 	}
 
+	public void addSchedule() throws SQLException {
+		vorname.getText();
+		nachname.getText();
+		ausbildungsjahr.getValue();
+		kategorie.getValue();
+	}
 	/**
 	 * @author Kinan Saeb
 	 *         <p>

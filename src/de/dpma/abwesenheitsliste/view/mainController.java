@@ -5,7 +5,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import de.dpma.abwesenheitsliste.AL;
-import de.dpma.abwesenheitsliste.dao.ManageUsersDAO;
+import de.dpma.abwesenheitsliste.dao.TerminDAO;
+import de.dpma.abwesenheitsliste.dao.UsersDAO;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,7 +27,9 @@ public class mainController implements Initializable {
 	String kategorie;
 	String datefield1;
 	String datefield2;
-	public static ManageUsersDAO manageUsersDAO = new ManageUsersDAO(AL.con.getConnection());
+	public static UsersDAO manageUsersDAO = new UsersDAO(AL.con.getConnection());
+	public static TerminDAO SearchUsersDAO = new TerminDAO(AL.con.getConnection());
+	public static TerminDAO createScheduleDAO = new TerminDAO(AL.con.getConnection());
 
 	@FXML
 	public void searchButton(ActionEvent event) {

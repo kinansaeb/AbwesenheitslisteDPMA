@@ -26,6 +26,7 @@ public class manageUsersController {
 	@FXML
 	private TableColumn<Benutzer, String> userName = new TableColumn<Benutzer, String>();
 	@FXML
+
 	private TableColumn<Benutzer, String> id = new TableColumn<Benutzer, String>();
 	@FXML
 	private TableColumn<Benutzer, String> ausbildungsjahr = new TableColumn<Benutzer, String>();
@@ -88,6 +89,14 @@ public class manageUsersController {
 			e.printStackTrace();
 
 		}
+	}
+
+	public void deleteUserButton() {
+		Benutzer user = userTbl.getSelectionModel().getSelectedItem();
+		int selectedIndex = userTbl.getSelectionModel().getSelectedIndex();
+		userTbl.getItems().remove(selectedIndex);
+		mainController.manageUsersDAO.deleteUser(user);
+
 	}
 
 	/**
